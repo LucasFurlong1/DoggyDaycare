@@ -1,0 +1,261 @@
+/*
+	Doggy Daycare and Retreat style sheet
+	
+	Filename: styles.css
+	Author: Lucas Furlong
+	Date: 12/6/2019
+*/
+
+/* reset styles */
+a, article, body, div, figcaption, figure, footer, header, h1, 
+h2, h3, img, li, nav, p, section, ul {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 1em;
+	height: 100%;
+}
+a:link {
+	text-decoration: none;
+	color: black;
+}
+a:visited {
+	color: black;
+}
+
+/*body and page container */
+.container{
+	margin: 0 auto;
+	border: 1px solid black;
+	min-height: 100%;
+}
+
+/* body */
+body {
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	
+}
+
+/* headings */
+header {
+	background-color: #0099CC;
+}
+h1 {
+	text-align: center;
+	padding: 0.5em;
+	font-family: 'Parisienne', cursive;
+	color: white;
+	text-shadow: 2px 2px 3px black;
+	font-size: 3em;
+}
+h2 {
+	text-align: center;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+/* site navigation */
+nav {
+	color: white;
+	text-align: center;
+}
+nav.sitenav2 {
+	text-align: right;
+}
+nav p {
+	display: inline-block;
+	margin: 0.4em;
+	font-weight: bold;
+}
+nav.sitenavmain p {
+	-webkit-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+	-webkit-transition-timing-function: ease-in;
+	transition-timing-function: ease-in;
+}
+nav.sitenavmain a:hover {
+	color: ivory;
+}
+nav a:active {
+	position: relative;
+	top: 1px;
+	left: 1px;
+}
+nav a:link {
+	text-decoration: none;
+}
+nav a:visited {
+	color: black;
+}
+nav.sitenavmain p:hover {
+	-ms-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+/* main content */
+div.main {
+	background-color: #CCFFCC;
+	opacity: 0.8;
+	overflow: auto;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 1em 3% 1em;
+}
+div.main p {
+	margin: 0.6em 0.2em 1.2em 0.6em;
+	padding-top: 1em;
+}
+div.main p:first-line {
+	font-weight: bold;
+}
+div.bgimage {
+	background: url("images/dog-getting-bath.jpg");
+	background-size: cover;
+	padding: 1.1em;
+	margin: 0 auto;
+}
+div.main a:link, div.main a:visited {
+	color: #66CCFF;
+}
+div.main a:active {
+	position: relative;
+	top: 1px;
+	left: 1px;
+}
+div.main a:hover {
+	color: black;
+}
+iframe {
+	border: 3px solid #0099CC;
+}
+section {
+   margin: 3em;
+   padding-top: 3em;
+}
+section p.rightside {
+   margin: 0.7em 0;
+   clear: left;
+}
+section p.leftside {
+   margin: 0.7em 0;
+   clear: right;
+}
+figure.rightside {
+   max-width: 50%;
+   height: auto;
+   margin-left: 2em;
+   float: right;
+   overflow: hidden;
+}
+figure.leftside {
+   max-width: 50%;
+   height: auto;
+   margin-right: 2em;
+   float: left;
+   overflow: hidden;
+}
+h3.rightside {
+   margin-bottom: 0.3em;
+   float: left;
+   clear: both;
+}
+h3.leftside {
+   margin-bottom: 0.3em;
+   float: right;
+   clear: both;
+}
+figure img { 
+	box-shadow: 0 15px 5px -6px #777;
+}
+a.twitter-timeline {
+	padding: 2em;
+}
+
+/* form styles */
+input[type=text], select, textarea, [type=datetime-local], [type=tel], [type=email]{
+	width: 100%;
+	resize: vertical;
+	box-sizing: border-box;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	border: 2px solid #ccc;
+	border-radius: 3px;
+	padding: 12px;
+}
+input[type=submit] {
+	background-color: white;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	width: 7em;
+	height: 3em;
+}
+input:focus, textarea:focus {
+	background-color: #cce5ef;
+}
+
+/* bottom bar */
+footer {
+	padding: 0.3em;
+	text-align: right;
+	background-color: #66CCFF;
+	clear:both;
+}
+footer p {
+	margin: 0.4em;
+}
+footer a:link, footer a:visited {
+	color: black;
+}
+
+/* small screen/tablet styles */
+@media screen and (min-width: 460px), print {
+	article {
+		padding: 2%;
+	}
+	figure {
+		padding: 2%;
+		display: inline-block;
+	}
+	figure img {
+		border: 2px solid #ccc;
+		box-shadow: 0 15px 5px -6px #777;
+	}
+	section {
+		text-align: center;
+	}
+	section h3, section p {
+		text-align: left;
+	}
+	nav p {
+		font-size: 35px;
+	}
+	section h3 {
+		font-size: 40px;
+	}
+}
+
+/* print styles */
+@media print {
+	body h1, article, footer {
+		color: #000;
+		background-color: #fff;
+	}
+	body {
+		max-width: 100%;
+		border: 0;
+	}
+	nav {
+		display: none;
+	}
+	img {
+		display: none;
+	}
+	div.main a {
+		display: none;
+	}
+}
+@page {
+	margin: 1in;
+}

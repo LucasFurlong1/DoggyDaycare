@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Schedule your Visit!</title>
+		<!--
+			Doggy Daycare and Retreat schedule page
+			Filename: index.html
+			
+			Author: Lucas Furlong
+			Date: 12/5/2019
+		-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width-device-width">
+		<link rel="stylesheet" href="styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" href="images/favicon.ico">
+	</head>
+	<body>
+		<script>
+			function validateForm() {
+				var a = document.forms["schedule"]["fname"].value;
+				var b = document.forms["schedule"]["lname"].value;
+				var c = document.forms["schedule"]["service"].value;
+				var d = document.forms["schedule"]["datentime"].value;
+				var e = document.forms["schedule"]["phonenumber"].value;
+				var f = document.forms["schedule"]["email"].value;
+				var g = document.forms["schedule"]["subject"].value;
+				if (a == "") {
+					alert("You must put your first name");
+					return false
+				}
+				if (b == "") {
+					alert("You must put your last name");
+					return false
+				}
+				if (c == "") {
+					alert("You must select a service");
+					return false
+				}
+				if (d == "") {
+					alert("You must you must input a valid date and time");
+					return false
+				}
+				if (e == "") {
+					alert("You must put a phone number");
+					return false
+				}
+				if (f == "") {
+					alert("You must you must put your email");
+					return false
+				}
+				if (g == "") {
+					alert("You must describe your dog");
+					return false
+				}
+			}
+		</script>
+		<div id="fb-root"></div>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>
+		<div class="container">
+			<header>
+				<h1 class="logo"><img src="images/doggy-daycare-and-spa.png" width="100" height="100" alt="Doggy Daycare & Retreat in Muskegon">Doggy Daycare & Retreat in Muskegon</h1>
+				<nav class="sitenavmain">
+					<p><a href="index.html">Home</a></p>
+					<p><a href="aboutus.html">About Us</a></p>
+					<p><a href="blog.html">Blog</a></p>
+					<p><a href="schedule.html">Schedule with Us!</a></p>
+					<div class="fb-like" data-href="https://www.facebook.com/pawsaplayin/" data-width="" data-layout="button" data-action="like" data-size="small" data-share="false"></div>
+				</nav>
+			</header>
+			<div class="bgimage">
+				<div class="main">
+					<form name="schedule" action="submission.html" onsubmit="return validateForm()">
+
+						<label for="fname">First Name</label>
+						<input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+						<label for="lname">Last Name</label>
+						<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+						<label for="service">What would you like done?</label>
+						<select id="service" name="service">
+							<option value="ddc">Doggy Day Care</option>
+							<option value="groom">Grooming</option>
+							<option value="boarding">Doggy Boarding</option>
+						</select>
+						
+						<label for="date">What day and time?</label>
+						<input type="datetime-local" id="date" name="datentime">
+						
+						<label for="number">Phone Number</label>
+						<input type="tel" id="number" name="phonenumber" placeholder="Your phone number...">
+						
+						<label for="email">E-mail</label>
+						<input type="email" id="email" name="email" placeholder="Your e-mail...">
+
+						<label for="subject">Description</label>
+						<textarea id="subject" name="subject" placeholder="Any notes? What's the breed? Describe your dog!" style="height:200px"></textarea>
+
+						<input type="submit" value="Submit" name="submit">
+
+					</form>
+				</div>
+			</div>
+			<footer>
+				<p>2517 Crozier Ave &#8226; Muskegon, MI 49441 &#8226; (231)564-6921</p>
+				<nav class="sitenav2">
+					<p><a href="privpol.html">Privacy Policy</a></p>
+					<p><a href="tos.html">Terms of Service</a></p>
+				</nav>
+			</footer>
+		</div>
+	</body>
+</html>
